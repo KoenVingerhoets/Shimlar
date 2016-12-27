@@ -1,0 +1,15 @@
+# Begin Script 
+#!/bin/sh 
+# 
+# Stay alive crontab script: 
+# 
+if test -f "/var/run/mysql/mysqld.pid"; then 
+	echo "/var/run/mysql/mysqld.pid" exist 
+else 
+	echo "/var/run/mysql/mysqld.pid" does not exist
+	myisamchk -r -q /var/lib/mysql/shimlar_game/Players
+	myisamchk -r -q /var/lib/mysql/shimlar_game/Inventory
+reboot > /dev/null 
+fi 
+exit 0 
+# End Script 

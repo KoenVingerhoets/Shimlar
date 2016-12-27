@@ -1,0 +1,322 @@
+<html>
+<head>
+<title>
+Shimlar donations
+</title>
+
+<script language="Javascript">
+<!--
+var counter = 1;
+function table(a, b, x, c, a1)
+{
+k = ( b - x  );
+
+if ( k > "0" )
+	{
+	document.write('<hr width="50%" color="red"><p align="center"><font color="red">');
+	document.write('<b>We did not reach the target yet...</b></font></p>');
+	document.write('<p align="center"><center><b><i>', a ,'</i></b><br>');
+	document.write('<font color="yellow">' , c , '</font><br>');
+	document.write('<table border="0" align="center"><tr><td align="right"><font color="white">Received: ' , x ,' $$</font></td><td>');
+	if ( x > 500 )
+		{ 
+		d = x / 500
+		e = Math.floor(d)
+		j = x % 500
+		p = 0
+		while ( p != e )
+			{
+			document.write('<br><img src="/shimgreen.gif" height="10" width="500" alt="', x , ' $$ donated"><br>');
+			p = p + 1
+			}
+		if ( j != 0 )
+			{
+			document.write('<br><img src="/shimgreen.gif" height="10" width="', j ,'" alt="', x ,' $$ donated"><br>');
+			};
+		document.write('<br></td></tr>');
+		}
+	else
+		{
+		document.write('<img src="/shimgreen.gif" height="10px" width="', x ,'px" alt="', x ,' $$ donated"></td></tr>');
+		};
+	document.write('<tr><td align="right"><font color="white">Needed: ' , b , ' $$</font></td><td>');
+	if ( b > 500 )
+		{ 
+		l = b / 500
+		m = Math.floor(l)
+		n = b % 500
+		o = 0
+		while ( o != m )
+			{
+			document.write('<br><img src="/shimred.gif" height="10" width="500" alt="', b , ' $$ donated"><br>');
+			o = o + 1
+			}
+		if ( n != 0 )
+			{
+			document.write('<br><img src="/shimred.gif" height="10" width="', n ,'" alt="', b ,' $$ donated"><br>');
+			};
+		document.write('<br></td></tr>');
+		}
+	else
+		{
+		document.write('<img src="/shimred.gif" height="10" width="', b ,'" alt="', b ,' $$ donated"></td></tr>');
+		};
+	document.write('</table>We are still looking for ', k , ' $$.</center></p>');
+	}
+
+else 
+	{
+    document.write('<hr width="50%" color="green"><p align="center"><font color="green"><b>Yay, we made the ' , b , ' $ needed!!</b></font></p>');
+	document.write('<p align="center"><center><b><i>', a ,'</i></b><br>');
+    if ( a1 == "1" ) 
+    	{
+		document.write('<font color="yellow"><b>Already implemented!! More info in the Manual!!</b></font><br>');
+        }
+	else {
+    	if ( a1 == "0" )
+        	{
+			document.write('<font color="yellow"><i>Still in development stage!!</i></font><br>');
+        	}
+		else {
+			document.write('<font color="yellow">' , c , '</font><br>');
+		};
+    };
+    document.write('<table border="0" align="center"><tr><td align="right"><font color="white">Received: ' , x ,' $$</font></td><td>');
+	if ( x > 500 )
+		{ 
+		d = x / 500
+		e = Math.floor(d)
+		j = x % 500
+		p = 0
+		while ( p != e )
+			{
+			document.write('<br><img src="/shimgreen.gif" height="10" width="500" alt="', x , ' $$ donated"><br>');
+			p = p + 1
+			}
+		if ( j != 0 )
+			{
+			document.write('<br><img src="/shimgreen.gif" height="10" width="', j ,'" alt="', x ,' $$ donated"><br>');
+			};
+		document.write('<br></td></tr>');
+		}
+	else
+		{
+		document.write('<img src="/shimgreen.gif" height="10" width="', x ,'" alt="', x ,' $$ donated"></td></tr>');
+		};
+	document.write('<tr><td align="right"><font color="white">Needed: ' , b , ' $$</font></td><td>');
+	if ( b > 500 )
+		{ 
+		l = b / 500
+		m = Math.floor(l)
+		n = b % 500
+		o = 0
+		while ( o != m )
+			{
+			document.write('<br><img src="/shimred.gif" height="10" width="500" alt="', b , ' $$ donated"><br>');
+			o = o + 1
+			}
+		if ( n != 0 )
+			{
+			document.write('<br><img src="/shimred.gif" height="10" width="', n ,'" alt="', b ,' $$ donated"><br>');
+			};
+		document.write('<br></td></tr>');
+		}
+	else
+		{
+		document.write('<img src="/shimred.gif" height="10" width="', b ,'" alt="', b ,' $$ donated"></td></tr>');
+		};
+	document.write('</table></center></p>');
+	}
+}
+
+function contribute(k, l)
+{
+document.write('<tr align="center">');
+document.write('<td align="center">' + counter + '</td>');
+document.write('<td align="right">');
+document.write('<font color="white">');
+document.write('<i><font size="2">- Thank you!! -</i></font><b>&nbsp;' , k , '</b>');
+document.write('</font>');
+document.write('</td>');
+document.write('<td align="left"><font color="white">');
+if (l>500) {
+	document.write('<img src="/shimgreen.gif" width="' + Math.min(l,500) + '" alt="' + l + ' $$ donated" height="15"><br>');
+	document.write('<img src="/shimgreen.gif" width="' + (l-500) + '" alt="' + l + ' $$ donated" height="15">&nbsp;' + l + ' $$.');
+} else {
+	document.write('<img src="/shimgreen.gif" width="' , l , '" alt="' , l , ' $$ donated" height="15">&nbsp;' , l , ' $$.');
+}
+document.write('</font></td>');
+document.write('</tr>');
+counter++;
+}
+//-->
+</script>
+<script language="javascript" src="dxonaytorzz.inc"></script>
+<script language="javascript" src="dzonaytorxzfor.inc"></script>
+<LINK href='/s.css' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- <body background="/rock.gif" alink="yellow" vlink="yellow" link="yellow"> -->
+<body>
+<h1 align="center">
+<font color="yellow">
+Shimlar donation page
+</font>
+</h1>
+<br>
+<font color="white">
+<center>You can contribute too!<br>
+Put in the "Payment for" field which Improvement you would like!<br>
+Don't forget to mention your char's name!!!!<br><br>
+<table width="90%" align="center" border="1">
+
+<tr>
+<td align="center" width="20%">
+<font color="white">
+Region / Type
+</font>
+</td>
+<td align="center" width="20%">
+<b>
+<font color="white">
+PayPal<br><i>Pay to maes_pils@hotmail.com</i>
+</font>
+</b>
+</td>
+<td align="center" width="20%">
+<b>
+<font color="white">
+Bank transfer
+</font>
+</b>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<b>
+<font color="white">
+USA
+</font>
+</b>
+</td>
+<td align="center">
+<font color="white">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="maes_pils@hotmail.com">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="return" value="http://www.shimlar.org/game.htm">
+<input type="hidden" name="cancel_return" value="http://www.shimlar.org/donate/index.shtml">
+<input type="image" src="http://images.paypal.com/images/x-click-but04.gif" border="2" bordercolor="white" name="submit" alt="Make donations with PayPal - it's fast, free and secure!">
+</form>
+<i>USA bank account / CC needed</i>
+</font>
+</td>
+<td align="center">
+<font color="white">
+<!--
+no bank transfers
+-->
+</font>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<b>
+<font color="white">
+EUROPE
+</font>
+</b>
+</td>
+<td align="center">
+<font color="white">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="maes_pils@hotmail.com">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="return" value="http://www.shimlar.org/game.htm">
+<input type="hidden" name="cancel_return" value="http://www.shimlar.org/donate/index.shtml">
+<input type="image" src="http://images.paypal.com/images/x-click-but04.gif" border="2" bordercolor="white" name="submit" alt="Make donations with PayPal - it's fast, free and secure!">
+</form>
+<i>CC needed</i>
+</font>
+</td>
+<td align="center">
+<font color="white">
+<a href="mailto:lorda@pandora.be">Mail me</a>
+</font>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<b>
+<font color="white">
+OTHER
+</font>
+</b>
+</td>
+<td align="center">
+<font color="white">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="maes_pils@hotmail.com">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="return" value="http://www.shimlar.org/game.htm">
+<input type="hidden" name="cancel_return" value="http://www.shimlar.org/donate/index.shtml">
+<input type="image" src="http://images.paypal.com/images/x-click-but04.gif" border="2" bordercolor="white" name="submit" alt="Make donations with PayPal - it's fast, free and secure!">
+</form>
+<i>CC needed</i>
+</font>
+</td>
+<td align="center">
+<font color="white">
+<!--
+no bank transfers
+-->
+</font>
+</td>
+</tr>
+
+<tr>
+<td colspan="3">We're PayPal verified!<br>
+<a href="https://www.paypal.com/us/verified/pal=maes_pils@hotmail.com" target="_blank">
+	<img src="verified.jpg" border="0">
+</a><br>Click to see it for yourself.
+</td>
+</tr>
+</table>
+<a href="http://www.sixfigureincome.com/" target="_blank">if you don't have money ;)</a>
+
+<br>
+<li>PayPal accepts some other countries as well (International account)</li>
+<li>If you don't have a credit card, let someone else donate and pay that person ;)</li>
+<li>Sending money by snail mail (regular mail) is forbidden by Law in most countries</li>
+<br><br>
+<b>
+<a href="/donate/donate2.htm" target="_self">Click here for more info about donations.</a><br>
+<a href="/donate/donate3.htm" target="_self">Click here for changes implemented already.</a>
+</b><br>
+</center>
+<hr color="#CCCCCC">
+<h2 align="center">Donators</h2>
+<table class="donate">
+<!-- include virtual="/donate/dxonaytorzz.inc" -->
+<script language="javascript">
+	displayDonators();
+</script>
+</table>
+<br>
+<br>
+<hr color="#CCCCCC">
+<h2 align="center">Graphical situation</h2>
+<!-- include virtual="/donate/dzonaytorxzfor.inc" -->
+<script language="javascript">
+	displayDonations();
+</script>
+<br>
+</font>
+</body>
+</html>

@@ -1,0 +1,90 @@
+BODY {
+	color: #DDDD00;
+	background-color: #000000;
+	font-family: Arial, "Times New Roman", sans-serif;
+	font-size: 12px;
+	scrollbar-3dlight-color : #CCCCCC;
+	scrollbar-arrow-color : White;
+	scrollbar-base-color : #000000;
+	scrollbar-darkshadow-color : DDDDDD;
+	scrollbar-face-color : #000000;
+	scrollbar-highlight-color : #999999;
+	scrollbar-shadow-color : #999999;
+	scrollbar-track-color : #FFFFFF;
+	border-collapse: collapse;
+}
+A:link {
+	color: #00FF50;
+	text-decoration: none;
+}
+A:hover {
+	color: #00FF50;
+	text-decoration: underline;
+}
+A:visited {
+	color: #00FF50;
+	text-decoration: none;
+}
+A:active {
+	color: #00FF50;
+	text-decoration: none;
+}
+TABLE {
+	padding: 2px;
+	border: 0px;
+	width: 100%;
+}
+TABLE.donate {
+	padding: 2px;
+	border: 0px;
+}
+TABLE.fromcode {
+	table-layout: auto;
+	padding: 2px;
+	border: 1px;
+}
+TD {
+	font-size: 12px;
+}
+TD.chat {
+	font-size: 12px;
+	border-style: dashed; 
+	border-width: 0.1cm;
+	border-color: #CCCCCC;
+	background-color: #000000;
+	color: #fffffa;
+}
+H4 {
+	color: #DDDDDD;
+	font-style: italic;
+}
+INPUT {
+	color: #EEEEEE;
+	font-family: Arial, "Times New Roman", sans-serif;
+	font-size: 12px;
+	background: black;
+  border:1px solid #CCCCCC;
+  cursor: hand;
+}
+INPUT.c {
+	color: black;
+	font-family: Arial, "Times New Roman", sans-serif;
+	font-size: 12px;
+	background: #EEEEEE;
+  border:1px solid #CCCCCC;
+  cursor: hand;
+}
+INPUT.button {
+	color: white;
+  font-weight: bold;
+	font-family: Arial, "Times New Roman", sans-serif;
+	font-size: 12px;
+	background: black;
+  border: 1px solid red;
+	cursor: hand;
+}
+SELECT {
+	background-color: #DDDDDD;
+	font-family: Arial, "Times New Roman", sans-serif;
+	font-size: 12px;
+}

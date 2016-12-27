@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Shimlar Top Lists</title>
+<script language="Javascript">
+<!--
+function submitter() {
+	document.all["btn_submit"].disabled = true;
+	document.frm.submit();
+}
+//-->
+</script>
+</head>
+<body bgcolor='000000' text='fffffa'>
+<center>
+<FORM METHOD='POST' action='ranks2.php' target='ax' id="frm" name="frm" onSubmit="return false;">
+<SELECT NAME='toplist'>
+	<OPTION value='good'>Good Alignment</OPTION>
+</SELECT>
+<select name='rt'>
+	<option value=-1>All</option>
+	<option value=0>Human</option>
+	<option value=1>Dwarf</option>
+	<option value=2>Elf</option>
+	<option value=3>Dark Elf</option>
+	<option value=4>Giant</option>
+	<option value=5>Troll</option>
+	<option value=6>Goblin</option>
+	<option value=7>Angel</option>
+	<option value=8>Gargoyle</option>
+	<option value=9>Balrog</option>
+	<option value=10>Kender</option>
+	<option value=11>Half Elf</option>
+	<option value=12>Dark Angel</option>
+	<option value=13>Galatai</option>
+	<option value=14>Flame Demon</option>
+	<option value=15>Duergar</option>
+	<option value=16>Sprite</option>
+	<option value=17>Genie</option>
+</select>
+<input type='submit' value='View List' name="btn_submit" id="btn_submit" onClick="submitter();">
+</FORM>
+<span id=rankpage>Loading...</span>
+</center>
+</body>
+</html>

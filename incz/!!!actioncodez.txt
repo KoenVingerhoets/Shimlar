@@ -1,0 +1,63 @@
+***action description***
+(main:)
+o=lOgin
+m=Move
+t=Teleport
+h1=Housing buy house
+h2=Housing store items
+h3=Housing take items
+h5=Housing upgrade estate
+h6=Housing set description
+h7=Housing set flag
+h8=Housing set shared owner
+g9=Housing set background	//not done yet
+b=Bank deposit
+b2=Bank deposit all
+w=Bank Withdraw
+w2=Bank withdraw all
+x=bank transfer (Xfer)
+i=locate players (fInd)
+r=Revive
+a=mAsteries
+v=leVel
+u=bUy items
+s=Sell items
+g=Give Items		//disabled
+k3=Market accept trade
+k2=Market offer trade
+k1=Market check trades
+e=gem item (Enchant)
+q1=Quest sign up
+q2=Quest get reward
+q=eQuip
+he=house HEaling
+nc=reiNCarnation
+gp=unenchant item (Gem Pop)
+pr=sacrifice gold (PRay)
+my=upgrade shadow to MYstic
+ta=buy drink (TAvern)
+c1=Clan create		//under test
+c2=Clan accept
+c3=Clan set leader2
+c4=Clan select bonus
+c5=Clan kick out
+d1=Kingdom settle
+d2=Kingdom set tax
+d3=Kingdom set name
+d4=Kingdom set description
+d5=Kingdom set flag
+d6=Kingdom buy defense
+d7=Kingdom buy mine
+d8=Kingdom buy misc
+d9=Kingdom take gold
+
+(battle:)
+n=New fight
+d=Duel
+f=attack with weapon(s) (Fight)
+c=Cast spell(s)
+
+(chat:)
+h=cHat
+
+**Caps letter shows where the action abbreviation is taken**

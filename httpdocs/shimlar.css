@@ -1,0 +1,34 @@
+BODY {
+	scrollbar-3dlight-color : yellow;
+	scrollbar-arrow-color : White;
+	scrollbar-base-color : Maroon;
+	scrollbar-darkshadow-color : Black;
+	scrollbar-face-color : Maroon;
+	scrollbar-highlight-color : #999999;
+	scrollbar-shadow-color : #999999;
+	scrollbar-track-color : #8B8B8B;
+	border-collapse: collapse;
+}
+INPUT {
+	color: white;
+	font-family: Verdana, "Times New Roman", sans-serif;
+	font-size: 12px;
+	background:maroon;
+  	border:1px solid yellow;
+}
+INPUT.button {
+	color: black;
+   font-weight:bold;
+	font-family: Verdana, "Times New Roman", sans-serif;
+	font-size: 12px;
+	background:#EEEEEE;
+  	border:1px solid black;
+	cursor: hand;
+	text-align: center;
+}
+A {
+	text-decoration: none;
+}
+A.donate {
+	text-decoration: underline;
+}

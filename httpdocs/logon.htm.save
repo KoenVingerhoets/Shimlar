@@ -1,0 +1,185 @@
+<html>
+<head>
+   <title>Shimlar</title>
+   <LINK href='/s.css' rel='stylesheet' type='text/css'>
+</head>
+<!-- <body text="#FFFF00" bgcolor="#000000" link="#FF99FF" vlink="#FF99FF" alink="#0000FF" > -->
+<body>
+<script language="javascript">
+	if (top.location.href == "http://www.shimlar.org/game.php") {
+		document.body.background=top.bgpic[0].src;
+	};
+</script>
+<script src="loginPage.js"></script>
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td width="40%" valign="top">
+<font color="white" size=+0><b>Log In Existing Character:</b></font>
+<table WIDTH="300">
+<tr>
+<form name="enter" action=main2.php target=arvot method=POST onSubmit="return false;">
+<td>Login Name:</td>
+<td><input type=text SIZE="18" MAXLENGTH="20" name="l" value=""></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type=password SIZE="10" MAXLENGTH="10" name="p" value="" onFocus="enabler();"></td>
+</tr>
+<tr>
+	<td>Font size:</td>
+	<td><select name="fonts" size="1">
+		<option value=12 selected>12</option>
+		<option value=13>13</option>
+		<option value=14>14</option>
+		<option value=15>15</option>
+		<option value=16>16</option>
+		<option value=17>17</option>
+		<option value=18>18</option>
+	</select></td>
+</tr>
+<tr>
+<td><input type=hidden name="a" value="o"></td>
+<td>
+<font size="1"><i>
+By checking the box below,
+I agree with the <a href="/TermsOfUse.htm" target="_blank">Terms Of Use</a> and the <a href="/PrivacyPolicy.htm" target="_blank">Privacy Policy.</a><br>
+I have (or a person in charge of me has) read the <a href="/ParentalAdvisory.htm" target="_blank">warning concerning real life details in online gaming</a>.
+UNCHECK if you disagree: <INPUT TYPE=CHECKBOX NAME="icanread" CHECKED></i></font><br> 
+<script language="Javascript">
+<!--
+document.write('<input type=button value="Enter Shimlar" id="btn_enter" name="btn_enter" onClick="loginPlayer();">');
+//-->
+</script>
+</td>
+</tr>
+<tr>
+<td></td><td><a href="recover.htm" target="_blank">Forgot Password?</a></td>
+</tr><tr>
+<td>New Password:</td>
+<td><input type=password SIZE="10" MAXLENGTH="10" name="k" value=""></td>
+</td>
+</tr>
+<tr>
+<td></td><td>
+<script language="Javascript">
+<!--
+document.write('<input type=button value="Change Password" onClick="loginPlayer();" id="btn_pass" name="btn_pass">');
+//-->
+</script>
+</td>
+</form></tr>
+</table>
+</td>
+<td WIDTH="100%">
+<font color="white" size=+0><b>Create a Character:</b></font>
+<table WIDTH="100%">
+<tr><td><font color="#FFFF00" size="-1">
+<b>Some things you should read before creating a character:</b><br>
+<b><i>Login name</i></b>
+<li>Choose a good login name.  Do <font color="red">NOT</font> use your char name as login name!!</li>
+<li>Your login name is <font color="red">ONLY</font> needed to log in the game, once logged in, your char name will be displayed.</li>
+<li>Your login name <font color="red">MUST be unique</font> (not used in the game by anyone else or yourself yet).</li>
+<br>
+<b><i>Password</i></b>
+<li><font color="red">Think</font> about your password.  'Password' is not a password, and your char name isn't either.</li>
+<li><font color="red">Don't share</font> your password.</li>
+<li>Use a <font color="red">unique password</font> for each char.</li>
+<li>Don't use your password anywhere else.</li>
+<li>Remember you can always retrieve a password.</li>
+<br>
+<b><i>Character name</i></b>
+<li>Choose an <font color="red">appropriate</font> name.</li>
+<li>Write normally, that is start with a capital, and use only one capital.</li>
+<li>Think about your name, I won't change it unless I deem it needed.</li>
+<li>This name will be <font color="red">your name IN the game</font>.</li>
+<li>Your character name <font color="red">MUST be unique</font> (not used in the game by anyone else or yourself yet).</li>
+<br>
+<b><i>Email</i></b>
+<li>Use a <font color="red">valid email</font> address.</li>
+<li>You'll receive a mail with a link you'll have to click before you can enter the game (email validation).</li>
+<li>If you lost your password, an email address is the ONLY way to retrieve it.</li>
+<br>
+<b><i>Security</i></b>
+<li>You need a valid email to log in.</li>
+<li>Your login name + password are needed to log in.</li>
+<li>Your login name is displayed nowhere in the game (with an exception for the password recovery email).</li>
+<br>
+<b><i>Normal vs Turn based</i></b>
+Shimlar actually incorporates two different games. They use the same code and database, but require a totally different strategy.
+You can find more info in the manual, but the main differences are here:
+<li>Normal: unlimited playing time, trading with others, toplist on level</li>
+<li>Turn based: limited nbr turns (fights), no trading, toplist based on fame</li>
+</font>
+</td></tr>
+<tr><td>
+<table border=1 bordercolor="white">
+<tr><td>
+<form name="crpl" action=create.php target=arvot method=POST>
+<font size=-1>Login Name<br>(ONLY to log in)</font></td>
+<td><input type=text SIZE="18" MAXLENGTH="20" name="newlogin" value=""> <font size=-1>(4-20 symbols)</font></td>
+</tr>
+<tr>
+<td><font size=-1>Password:</font></td>
+<td><input type=password SIZE="10" MAXLENGTH="10" name="newpw" value=""> <font size=-1>(4-10 symbols)</font></td>
+</tr>
+<tr>
+<td><font size=-1>Re-type password:</font></td>
+<td><input type=password SIZE="10" MAXLENGTH="10" name="newpw2" value=""></td>
+</tr>
+<tr>
+<td><font size=-1>Character Name<br>(displayed IN GAME)</font></td>
+<td><input type=text SIZE="18" MAXLENGTH="20" name="newpl" value=""> <font size=-1>(4-20 symbols)</font></td>
+</tr>
+<tr>
+<td><font size=-1>Email:</font></td>
+<td><input type=text SIZE="25" MAXLENGTH="30" name="maili" value=""><br>
+<font size="-1" color="white">You will receive a link on this mail address where you must validate your character.</font>
+</td>
+</tr>
+<tr>
+<td><font size=-1>Race:</font></td>
+<td><select NAME="rn2">
+<option value=0>Human</option>
+<option value=1>Dwarf</option>
+<option value=2>Elf</option>
+<option value=3>Dark Elf</option>
+<option value=4>Giant</option>
+<option value=5>Troll</option>
+<option value=6>Goblin</option>
+<option value=7>Angel</option>
+<option value=8>Gargoyle</option>
+</select></td></tr>
+<tr>
+<td><font size=-1>Gender:</font></td>
+<td><select NAME="gn2" SIZE>
+	<option value=0>Male</option>
+	<option value=1>Female</option>
+</select>
+</td>
+</tr>
+<tr>
+	<td><font size=-1>Type:</font></td>
+	<td><select name="statusType">
+		<option value=0>Normal</option>
+		<option value=1 selected>Turn based</option>
+	</select>
+	<br><br>
+	<font size="1"><i>
+	By checking the box below,
+I agree with the <a href="/TermsOfUse.htm" target="_blank">Terms Of Use</a> and the <a href="/PrivacyPolicy.htm" target="_blank">Privacy Policy.</a><br>
+I have (or a person in charge of me has) read the <a href="/ParentalAdvisory.htm" target="_blank">warning concerning real life details in online gaming</a>.
+UNCHECK if you disagree: <INPUT TYPE=CHECKBOX NAME="icanread" CHECKED></i></font><br>
+<script language="Javascript">
+<!--
+document.write('<input type=button value="Create Character" id="btn_create" name="btn_create" onClick="javascript:if(document.all["icanread"].checked){this.form.submit();}else{void();}">');
+//-->
+</script>
+
+</td>
+</form></tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

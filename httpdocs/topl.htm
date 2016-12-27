@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Shimlar Top Lists</title>
+<script language="Javascript">
+<!--
+function submitter() {
+	document.all["btn_submit"].disabled = true;
+	document.frm.submit();
+}
+function enabler() {
+	document.all["btn_submit"].disabled = false;
+}
+//-->
+</script>
+</head>
+<body bgcolor='000000' text='fffffa'>
+<center>
+<FORM METHOD='POST' action='ranks2.php' target=ax id=frm name=frm onSubmit="return false;">
+<SELECT NAME='toplist' onChange='enabler();'>
+	<option value='fame'>Fame (TB)</option>
+	<OPTION value='exp'>Levels</OPTION>
+	<option value='clant'>Clans (power - TB)</option>
+	<OPTION value='clan'>Clans (power)</OPTION>		
+	<OPTION value='gold'>Gold (banked)</OPTION>
+	<OPTION value='good'>Good Alignment</OPTION>
+	<OPTION value='evil'>Evil Alignment</OPTION>
+	<option value='quest'>Most Quests Completed</option>
+	<OPTION value='mods'>Online Moderators</OPTION>
+	<OPTION value='muted'>Muted Players</OPTION>
+	<option value='qdelay'>Recent Quests</option>
+	<option value='jail'>Jailed Players</option>
+	<option value='married'>Married Players</option>
+	<option value='pk'>Most PK's</option>	
+</SELECT>
+<select name='rt' onChange='enabler();'>
+	<option value=-1>All</option>
+	<option value=0>Human</option>
+	<option value=1>Dwarf</option>
+	<option value=2>Elf</option>
+	<option value=3>Dark Elf</option>
+	<option value=4>Giant</option>
+	<option value=5>Troll</option>
+	<option value=6>Goblin</option>
+	<option value=7>Angel</option>
+	<option value=8>Gargoyle</option>
+	<option value=9>Balrog</option>
+	<option value=10>Kender</option>
+	<option value=11>Half Elf</option>
+	<option value=12>Dark Angel</option>
+	<option value=13>Galatai</option>
+	<option value=14>Flame Demon</option>
+	<option value=15>Duergar</option>
+	<option value=16>Sprite</option>
+	<option value=17>Genie</option>
+	<option value=18>Dragon</option>
+	<option value=19>Vampire</option>
+</select>
+<input type='submit' value='View List' name=btn_submit id=btn_submit onClick="submitter();">
+</FORM>
+<span id=rankpage>Loading...</span>
+</center>
+</body>
+</html>

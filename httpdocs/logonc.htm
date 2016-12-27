@@ -1,0 +1,92 @@
+<html>
+<head>
+   <title>Shimlar</title>
+<script language="Javascript">
+<!--
+function submitter() {
+	if (document.all["icanread"].checked == false) {
+		alert("Sorry, can't allow you in when you don't accept the ToS or PA or PP");
+		return;
+	}
+	document.all["btn_submit"].disabled = true;
+	document.all["btn_change"].disabled = true;
+	document.frm.submit();
+}
+function enabler() {
+	document.all["btn_submit"].disabled = false;
+	document.all["btn_change"].disabled = false;
+}	
+//-->
+</script>
+<LINK href='/s.css' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- <body text="#FFFF00" bgcolor="#000000" link="#FF99FF" vlink="#FF99FF" alink="#0000FF"> -->
+<body>
+<!-- <script>document.body.background=top.bgpic[0].src;</script> -->
+<table BORDER=0 WIDTH="100%" >
+<tr>
+<td>
+<font color="#00DD99"><font size=+0>Log In Existing Character:</font></font>
+<table WIDTH="300">
+<tr>
+<form action=main2.php target=arvot method=POST id="frm" name="frm" onSubmit="return false;">
+<td>Login Name: (<i>this is NOT your char name!</i>)</td>
+<td><input type=text SIZE="18" MAXLENGTH="20" name="l" value=""></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type=password SIZE="10" MAXLENGTH="10" name="p" value="" onFocus="enabler();"></td>
+</tr>
+<tr>
+	<td>Font size:</td>
+	<td><select name="fonts" size="1">
+		<option value=12 selected>12</option>
+		<option value=13>13</option>
+		<option value=14>14</option>
+		<option value=15>15</option>
+		<option value=16>16</option>
+		<option value=17>17</option>
+		<option value=18>18</option>
+	</select></td>
+</tr>
+<tr>
+<td><input type=hidden name="a" value="o"></td>
+<td>
+<font size="1"><i>
+By checking the box below,
+I agree with the <a href="/TermsOfUse.htm" target="_blank">Terms Of Use</a> and the <a href="/PrivacyPolicy.htm" target="_blank">Privacy Policy.</a> I have (or a person in charge of me has) read the <a href="/ParentalAdvisory.htm" target="_blank">warning concerning real life details in online gaming</a>.<br>
+UNCHECK if you disagree: <INPUT TYPE=CHECKBOX NAME="icanread" CHECKED></i></font><br>
+<script language="Javascript">
+<!--
+document.write('<input type=button value="Enter Shimlar" onClick="submitter();" id="btn_submit" name="btn_submit">');
+//-->
+</script>
+</td>
+</tr>
+<tr>
+<td></td><td><a href="recover.htm" target="_blank">Forgot Password?</a></td>
+</tr><tr>
+<td>New Password:</td>
+<td><input type=password SIZE="12" MAXLENGTH="10" name="k" value=""></td>
+</td>
+</tr>
+<tr>
+<td></td><td>
+<script language="Javascript">
+<!--
+document.write('<input type=button value="Change Password" onClick="submitter();" id="btn_change" name="btn_change">');
+//-->
+</script>
+</td>
+</form></tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+<head>
+ <title>Shimlar chat commands</title>
+ <script language="Javascript">
+ function makeRow(a,b,c) {
+ 	if (!c) { c="&nbsp;"; }
+ 	document.write("<tr><td align='left'><font color='green'>" + a + "</font></td><td align='left'>" + b + "</td><td>" + c + "</td></tr>");
+ };
+ function makeRowDisabled(a,b,c) {
+ 	if (!c) { c="&nbsp;"; }
+ 	document.write("<tr><td align='left'><font color='red'>" + a + "</font></td><td align='left'>" + b + "</td><td>" + c + "</td></tr>");
+ };
+ function title(d) {
+ 	document.write("<th colspan=3><u>" + d + "</u></th>");
+ }
+ function blank() {
+ 	document.write("<tr><td colspan=3>&nbsp;</td></tr>");
+ }
+ </script>
+</head>
+
+<body>
+<table border=1 bordercolor="#CCCCCC" align="center">
+<script language="Javascript">
+// commands for all people
+title("-- General commands --");
+makeRow("/e $text", "emote");
+makeRow("/r $text", "race chat");
+makeRow("/last $text", "set last name", "'/last null' will remove it");
+makeRow("/m $player: $text", "private message");
+makeRow("/id $name", "id a player");
+makeRow("/ignlvl $lvl", "set ignore level");
+makeRow("/zone $name", "shows zone info");
+makeRow("/time", "shows Shimlar server time");
+makeRow("/lorda", "contact crew link", "/sisco, /gilian, /morph, /lobo <br>gives the same result");
+makeRow("/g_orb", "locate players nearby");
+makeRow("/pignore $name", "ignore a player as long as your browser is open");
+makeRow("/pvoice $name", "stop ignoring");
+makeRow("/help", "gives a link towards help documents");
+makeRow("/helprp", "gives a link towards rp related documents");
+makeRow("/norace", "disables racechat");
+makeRow("/racechat", "enables racechat again");
+makeRow("/quest", "shows how many quests you've completed and when you can sign up again");
+makeRow("/pk", "indicates when you can duel again");
+makeRow("/wed $name", "shows your intention to marry someone");
+makeRow("/yesido", "confirms the marriage proposal");
+makeRow("/dm","sends a message to the destinee and yourself");
+makeRow("/kills","shows how many players you killed yet");
+makeRow("/buddy", "Shows your buddies, green is online, yellow is probably online, red is not online");
+makeRow("/buddya $name", "adds a person to your list.", "buddy Add");
+makeRow("/buddyc $name", "confirms you want to be on someone's list.", "buddy Confirm");
+makeRow("/buddyr $name", "removes a person from your list.", "buddy Remove");
+makeRow("/buddyq $name", "remove yourself from $name's list.", "buddy Quit");
+makeRow("/mbuddy $text", "message to all your buddies");
+makeRow("/pktag $text", "adds/updates your pk tag<br>must include :pk:, that will be replaced by your opponent name", "'/pktag null' will remove it");
+blank();
+title("-- Clan commands --");
+makeRow("/clandonate $amount","donates $amount from your bank to your clan's kingdom bank");
+makeRow("/clan", "shows some info about your clan");
+makeRow("/members", "Shows the online clanmembers");
+makeRow("/leaders $text", "Speak to your leaders");
+blank();
+title("-- Clan leaders -- ");
+makeRow("/mc $text", "message to all clan members");
+makeRow("/resign","makes your second leader the new clan leader, while you stay in the clan");
+blank();
+// commands for mods
+title("-- Mods + Archwizards commands --");
+makeRow("/w $text", "modchat");
+makeRow("/wm $text", "send pm to all mods");
+makeRow("/d $text", "description", "only in RP");
+makeRow("/p $text", "Priest");
+makeRow("/dp $text", "Demon (Dark priest)");
+makeRow("/ps $text", "Priestess");
+makeRow("/dps $text", "Demon (Dark priestess)");
+makeRow("/pm $player: $text", "private message like a normal player", "includes /check $name!");
+makeRow("/warn $text", "mod warning", "shortcuts for warnings are : <br>ooc - ooc warning for roleplay <br>beg - begging warning <br>play - warning to play nicely <br>pm - not post pms <br>help - read the rules warning <br>spam - spam warning <br>caps - caps warning");
+makeRowDisabled("/award $name $amount", "reward rp\'ers");
+makeRow("/mute $name: $hours", "mute and jail player for x hours");
+makeRow("/perma $name", "permamute someone");
+makeRow("/curse $name", "make someone talk backwards");
+makeRow("/caps $name", "make someone unable to speak in CAPS");
+makeRow("/newrp $name", "sends link for RP guide", "same as /newrp");
+makeRow("/new $name", "sends link for manual", "same as /new");
+makeRow("/commands $name", "sends link for commands", "");
+makeRow("/rules $name", "sends link to rules", "");
+makeRow("/page", "requesting help from an arch");
+makeRow("/kill $name", "kills a player", "includes /check $name!");
+makeRow("/onpeeps $cmd", "shows info", "/onpeeps help for more info");
+makeRow("/check $name", "disables a players ability to send equipment");
+makeRow("/uncheck $name", "enables a players ability to send equipment");
+makeRow("/setign $name: $lvl", "sets the ignore lvl for $name at $lvl, also disables the sending of items");
+makeRow("/norp $name", "blocks the ability to talk in RP for 61 to 120 minutes");
+makeRow("/nosales $name", "blocks the ability to talk in Sales for 61 to 120 minutes");
+blank();
+// commands for archies
+title("-- Archwizards commands --");
+makeRow("/o $text", "official announcement");
+makeRow("/last $name null", "blank out last name");
+makeRow("/voice $name", "unmute/uncurse player");
+makeRowDisabled("/zap $name", "kills, -5 lvl, -20% of each mastery, not banked gold gone");
+makeRow("/ban $name", "bans a player");
+makeRow("/sban $name", "anonymous bans");
+makeRow("/ip $name", "checks IP");
+makeRow("/loc $name", "locates a player");
+makeRow("/tele $zone", "arch teleport");
+makeRow("/g_orb2", "macro checking");
+makeRow("/macro: $text", "macro test");
+makeRow("/slap","slaps");
+</script>
+</table>
+</body>
+</html>

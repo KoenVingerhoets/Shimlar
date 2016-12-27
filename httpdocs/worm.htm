@@ -1,0 +1,131 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.73 [en] (Win98; U) [Netscape]">
+   <meta name="Author" content="ShadowMouse Software">
+   <title>What does the Snake and chat have in common?</title>
+</head>
+<body text="#000000" bgcolor="#D7C78E" link="#3366FF" vlink="#3333FF" alink="#000099" background="paper1.gif">
+The "worm game", know to most
+as Snake for the Nokia mobile phones, uses the same
+<br>engine for worm movement that the shim chat uses to move the messages.
+Here is how it
+<br>works:
+<br>Consider a fixed size (not growing) worm moving horizontaly. The situation
+at some point
+<br>can be explained by a 1 dimension array (table with 1 row), as the
+Y coordinate does not
+<br>change. Supose the worm head is at screen pixel 15, the worm is 10
+pixels long and is
+<br>moving towards the bigger coordinates (to the right)
+<table BORDER COLS=12 WIDTH="100%" >
+<tr>
+<td>tail -></td>
+
+<td>6</td>
+
+<td>7</td>
+
+<td>8</td>
+
+<td>9</td>
+
+<td>10</td>
+
+<td>11</td>
+
+<td>12</td>
+
+<td>13</td>
+
+<td>14</td>
+
+<td>15</td>
+
+<td>&lt;- head</td>
+</tr>
+</table>
+
+<p>now when the worm moves forward, the old tail is "deleted", the pixel
+turned off, then coordinates
+<br>are being "pushed back" and finaly a pixel at the new head coordinates
+is turned on.
+<br>&nbsp;
+<table BORDER COLS=12 WIDTH="100%" >
+<tr>
+<td>6->deleted</td>
+
+<td>7</td>
+
+<td>8</td>
+
+<td>9</td>
+
+<td>10</td>
+
+<td>11</td>
+
+<td>12</td>
+
+<td>13</td>
+
+<td>14</td>
+
+<td>15</td>
+
+<td>16->new pixel</td>
+
+<td>&lt;- head</td>
+</tr>
+</table>
+
+<p>This way, there is no need to "flush screen", and only two pixels are
+used each move, saving considerable
+<br>resources. At least it was significant back in '97.
+<br>((this works for any movement path, just the table is 2 rows, x and
+y coords))
+<p>Now the chat can be considered a size 40 worm moving up. A new message
+is the new head, and
+<br>the message at 40 on the last update is the tail, so is being replaced
+by the one at 39, etc.
+<br>This way, there is no need to output any "old chat" and no extra memory
+is used, there is just four
+<br>chat tables. (one for each channel and one which is displayed).
+<p>This is called "worm game engine version 1.1"
+<br>(v 1.0 put head first and deleted tail later resulting in a potential
+bug)
+<p>Now, there is a version 1.2 too, known as the "commando upgrade". It
+really helps with fixed sized tables,
+<br>there is just an extra row containing "message numbers". This way there
+is actualy no need at all to push the
+<br>old messages in the table, you just replace the oldest one with the
+newest one and update one value in the
+<br>counter row. With a small addition, if the max posible table size is
+known, it can be adjusted for dynamic
+<br>length worm or chat. This saves more time the longer the tables are,
+so is not realy helpful in situations
+<br>with small sized tables, but helps in grafic versions of the worm game,
+where the length can go to many
+<br>thousands of pixels.
+<p>This must be very confusing to read :) but maybe will help somebody
+make a chat engine or a worm game.
+<p>Oh, I don't have copyright on this, and it was probably used before
+anyhow, but the 1.2 upgrade can help
+<br>in some situations, and is not used in worm games usually.
+<p>If somebody knows c but didn't understand the file, here is the piece
+of code to push coords back:
+<p><b>/*</b>
+<br><b>&nbsp; Coordinates cycling back, w1[1] becomes w1[2] and so on.</b>
+<br><b>&nbsp; Copyright by ShadowMouse software 1997.</b>
+<br><b>*/</b>
+<br><b>for(a1=wlen;a1>1;a1--)</b>
+<br><b>{</b>
+<br><b>&nbsp;wx[a1]=wx[a1-1];</b>
+<br><b>&nbsp;wy[a1]=wy[a1-1];</b>
+<br><b>}</b>
+<p>If anyone is interested in acquiring the whole worm game code, contact
+me on STP. It is actualy well
+<br>documented and easy to understand if you know c.
+</body>
+</html>

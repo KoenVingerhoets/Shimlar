@@ -1,0 +1,1032 @@
+<html><head><title>Modified Statistics Calculator</title>
+<script>
+wep_list1=new Array("Dagger","Short Sword","Demon's Nail","Scimitar","Lamprey","Sabre","Falchion","Long Sword","Gladius","Cutlass","Battle Sword","War Sword","Broad Sword","Crystal Sword","Rune Sword","Tusk Sword","Jataghan","Claymore","Executioner Sword","Bastard Sword","Flamberge","Giant Sword","Conquestor Sword","Mythical Sword","Highlander Sword","Balrog Blade","Archangel Blade","Rapier of the Sky","Dimension Claymore","Mythinite Falchion","Sword of the Realms","Nightmare Sword","Vorpal Blade","Sword of Eternity");
+wep_list2=new Array("Hand Axe","Hatchet","Steel Axe","Wodcutter's Axe","Great Axe","War Axe","Bearded Axe","Tabar","Ancient Axe","Tomahawak","Berserker Axe","Silver Edge Axe","Dwarven Mining Pick","Military Pick","Weird Axe","Decapitator","Axe of Kevlar","Axe of Doom","Ancient Dwarven Axe","Troll Chieftain Axe","Lucifer's Axe","Legendary Minotaur Axe","Adamantium Waraxe","Endless Night Axe","Limb Destroyer","Axe of Power","Inflictor of Pain","Nightblade Waraxe","Dwarven Axe of Doom","Infernal Poisoned Axe","Mythinite Hatchet","Edge of Terror","Black Prayer Axe","Double axe of Time");
+wep_list3=new Array("Tree Branch","Walking Staff","Short Staff","Staff","Long Staff","Gnarled Staff","War Staff","Staff of the Battlemage","Gothic Staff","Ironhead Staff","Bladed Quarterstaff","Rune Staff","Twisted Staff","Archon Staff","Elder Staff","Elven Batllestaff","Serpent Staff","Salamander Staff","Ribcracker Staff","Stormcaller Staff","Staff of Light","Staff of the Winds","Staff of the Moon","Walker of Eternity","Spine Splitter","Warstaff of the Deep","Lamurian Battlestaff","Quarterstaff of Hades","Highlord Staff","Necromancer Staff","Staff of Blood","Eternal Tree Staff","Mythinite Longstaff","Staff of Mystery");
+wep_list4=new Array("Club","Spiked Club","Cudgel","Mace","Flanged Mace","Morningstar","Crusher","War Hammer","War Club","Knout","Tyrant Club","Devil Star","Ogre Battlehammer","Goblin Scourge","Giant Mace","Mythril Mace","Steel Maul","Ironstone Hammer","Dark Orc Crusher","Mace of Destruction","Armor Basher","Avatar Maul","Hammer of The Skies","Earthshaker","Giant King Maul","Knee Breaker","Skull Splitter","Magebane Hammer","Mythinite Flail","Abyss Maul","Alien Morningstar","Titanic Squisher","Infernal Maul","Hammer of the Gods");
+
+spell_list1=new Array("Faerie Fire","Minor Ignite","Burning Hands","Firebolt","Flame Blast","Flame Strike","Burning Blood","Fire Fury","Fireball","Incinirating Ray","Hell's Legion","Flame Gusts","Deadly Destruction","Gaze Of The Phoenix","Searing Orb","Incendiary Strike","Demon Bane","Aura of Seraph","Major Ignite","Elemental Chaos","Burning Explosion","Orb Of Fury","Flame Gate","Flamerain Deathshower","Scorching Touch","Meteoric Terrablast","Mythril Melter","Hell Gate","Pentagonal Flames","Magma Blast","Incinirating Devastation","Orb of Hell","Ataturk's Revenge","Flame of Mystery");
+spell_list2=new Array("Gaze of Cold","Chilling Touch","Cold Bolt","Ice Spike","Ice Gaze","Mind Chill","Vampire Kiss","Cone of Cold","Finger Of Death","Ice Storm","Wrighteous Wrath","Ring of Cold","Hannibal's Horror","Ice Cone","Creeping Doom","Elemental Strike","Fakir's Freezing Sphere","Freezing Ring","Frost of Tharsis","Unholy Blight","Ice Nova","Shades Call","Arctic Breath","White Forgettance","Eternal Chiller","Snowball Overload","Doom Bolt","Ice Gate","Redrum's Revenge","Hands of Death","Death Wish","Absolute Freeze","Winter Dragonbreath","Death Embrace","Chill of Eternity");
+spell_list3=new Array("Minor Shock","Magic Arrow","Lightning Bolt","Demon Breath","Spectre Strike","Static Charge","Mind Mutation","Rain Of Death","Deadly Pestilence","Storm Strike","Spiritual Wrath","Arctic Winds","Soul Eater","Razor Storm","Twin Twisters","Undead Embrace","Acid Rain","Heaven's Wrath","Fazim's Fist","Cokatrice Feathers","Deadly Eclipse","Contrived Hurricane","Satanic Swarm","Galeblower's Stormweave","Cloud of Doom" , "Cumulus Deathbringer","Tempestual Tornado","Hollow Hurricane","DragonLord's Ephemeral Hex","Storm of Ancients","Black Samum","Terminating Twister","Rayden's Revenge","Winds of Time");
+spell_list4=new Array("Minor Heal","Cure","Priest Touch","Bolt Of Light","Heal","Soul Soother","Herbal Restoration","Nullifier","Beltin's Blessing","Sorcerers Surgery","Kiss Of Life","Angel Touch","Allizar's Antidote","Sadim's Sanctuary","Soul Reviver","Godly Touch","Instant Remedy","Heavenly Hiatus","Ariel's Aura","Rain Of The Gods","Elixir Of Life","Redicir's Remedy","Soothing Restoration","Halinor's Harmonious Heal","Total Repair","Miraculous Renewal","Liisa's Lament","Relentless Rejuvination","Devil's Dance","Drusyle's Ethereal Storm","Touch of Mystery","Bless of Heaven","Unending Cure","Restoration of Power");
+
+armor_list1=new Array("Clothes","Wool Cloak","Leather Armor","Padded Leather Armor","Studded Leather Armor","Chainmail Armor","Linked Armor","Ringmail Armor","Elven Chain","Combat Plate","Mage Plate","Heavy Plate","Lamurian Skin Armor","Moloch Armor","Angel Skin Armor","Ancient Breastplate","Mythril Ringmail","Adamantium Plate","Morkal Armor","Dragon Scale Plate","Valar Tunic","Lucifer's Cape","Elemental Armor","Meteoric Chainmail","Hellforged Plate","Eternity Armor","Mythinite Platemail","Holy Plate of Light","Behemoth Scalemail","Plate of the Realms","Timeless Ice Armor","Niflheim Plate","Dominion Chainmail","Plate of Mystery");
+armor_list2=new Array("Small Shield","Wooden Shield","Round Shield","Kite Shield","Nature Shield","Tower Shield","Golden Pavise","Gothic Shield","Scutum","Serpent Scale Shield","Ancient Shield","Hyperion Shield","Blade Breaker","Aegis Shield","Paladin Shield","Small Mythril Shield","Crusader Shield","Lich Boneshield","Dragon Scale Shield","Mythril Wallshield","Morkal Targe","Adamantium Buckler","Shield of the Elements","Demonic Protector","Impenetrable Shield","Behemoth Skin Shield","Mythinite Shield","Shield of the Realms","Pit Fiend Shield","Abyss Shield","Devil Boneshield","Gaia Wallshield","Ageless Pavise","Shield of Power");
+
+acc_list=new Array("Copper Ring","Iron Ring","Blue Ring","Yellow Ring","Goblin Ring","Wedding Ring","Band of Defence","Amulet of Flames","Amulet of Ice","Amulet of Lightning","Pendant of Durability","Orb of Curing","Orb of Channeling","Orb of Power","Gloves of Skill","Gloves of Haste","Gauntlets of Might","Helmet of Invisibility","Crystal of Relocation","Orb of Learning","Chalice of Luck","Golden Orb of Enlightenment","Eternal Ring","Band of the Chosen","The One Ring");
+gem_list=new Array("amethyst","emerald","ruby","sapphire","pearl","quartz","opal","tourmaline","tanzanite","black pearl","topaz","moonstone","bloodrock","malachite","corundum","dragon fang","demon fang","frozen tear","diamond","atmashidade","jade");
+
+c_bonus=new Array("+3 Armor Class","+5% exp a kill","+10% gold a kill","+50% drop chance","1.5x damage","-1h quest delay","+10% temple luck","+10% exp a kill");
+kd_xlist=new Array("Old Shed","Magic Barrier","Blade Sharpener","Concentration Magnifier","Force of Friendship","Black Market","Tracker Academy");
+
+ro_nums=new Array("I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII");
+g_grade=new Array("*","**","***","****");
+
+function calc(){
+  mastery1=0;mastery2=0;mastery3=0;mastery4=0;mastery5=0;
+  str=document.st.str.value;  dex=document.st.dex.value;
+  ntl=document.st.ntl.value;  wis=document.st.wis.value;
+  vit=document.st.vit.value;  life=document.st.life.value;
+  e_str=document.st.e_stats.value;  e_dex=document.st.e_stats.value;
+  e_ntl=document.st.e_stats.value;  e_wis=document.st.e_stats.value;
+  e_life=document.st.e_stats.value;  e_eq=document.st.e_eq.value;
+  rhi=document.st.rhi.value; rhe=document.st.rhc.selectedIndex*10+document.st.rht.selectedIndex+1;
+  lhi=document.st.lhi.value; lhe=document.st.lhc.selectedIndex*10+document.st.lht.selectedIndex+1;
+  s1i=document.st.s1i.value; s1e=document.st.s1c.selectedIndex*10+document.st.s1t.selectedIndex+1;
+  s2i=document.st.s2i.value; s2e=document.st.s2c.selectedIndex*10+document.st.s2t.selectedIndex+1;
+  ari=document.st.ari.value; are=document.st.arc.selectedIndex*10+document.st.arx.selectedIndex+1;
+  aci=document.st.aci.value; ace=document.st.act.selectedIndex+1;
+  clani=document.st.clani.value; clan=document.st.clan.selectedIndex+1;
+  kdi=document.st.kdi.value;
+  rht=document.st.rht.options.selectedIndex+1;
+  lht=document.st.lht.options.selectedIndex+1;
+  s1t=document.st.s1t.options.selectedIndex+1;
+  s2t=document.st.s2t.options.selectedIndex+1;
+
+  if(rhe==6||rhe==16||rhe==26){
+    rhe=0;rhi=0;
+  }
+  if(lhe==6||lhe==16||lhe==26){
+    lhe=0;lhi=0;
+  }
+  if(s1e==5||s1e==15||s1e==25){
+    s1e=0;s1i=0;
+  }
+  if(s2e==5||s2e==15||s2e==25){
+    s2e=0;s2i=0;
+  }
+  if(are==2||are==12||are==22){
+    are=0;ari=0;
+  }
+  if(ace==2){
+    ace=0;aci=0;
+  }
+  if(clan==3){
+    clan=0;clani=0;
+  }
+  g1=document.st.g1.value;  g2=document.st.g2.value;
+  g3=document.st.g3.value;  g4=document.st.g4.value;
+  g5=document.st.g5.value;  g6=document.st.g6.value;
+  g7=document.st.g7.value;  g8=document.st.g8.value;
+  g9=document.st.g9.value;  g10=document.st.g10.value;
+  gems=new Array(g1,g2,g3,g4,g5,g6,g7,g8,g9,g10);
+  m1=document.st.m1.value;  m2=document.st.m2.value;
+  m3=document.st.m3.value;  m4=document.st.m4.value;
+  m5=document.st.m5.value;  m6=document.st.m6.value;
+  m7=document.st.m7.value;  m8=document.st.m8.value;
+  m9=document.st.m9.value;
+  gold_bonus=0; exp_bonus=0; init_bonus=0; drop_bonus=0;
+
+  if(are>0){
+    mastery5=m9;
+    if(are==21){
+      life=Math.min(vit,life+Math.round(vit*(1.04+ari/125)));
+    }
+  }else{
+    are=0;ari=1;
+    mastery5=0;
+  }
+  if((rhe%10)==1){
+    mastery1=m1;
+    if(rhe==21){
+      dex*=(1.04+rhi/125);
+      e_ntl/=(1.02+rhi/250);
+    }
+  }else if((rhe%10)==2){
+    mastery1=m2;
+    if(rhe==22){
+      dex*=(1.04+rhi/125);
+      str*=(1.02+rhi/250);
+    }
+  }else if((rhe%10)==3){
+    mastery1=m3;
+    if(rhe==23){
+      dex*=(1.04+rhi/125);
+      gold_bonus+=0.05*((rhi+5)/5);
+//      ntl*=(1.03+rhi/167);
+    }
+  }else if((rhe%10)==4){
+    mastery1=m4;
+    if(rhe==24){
+      dex*=(1.04+rhi/125);
+      e_dex/=(1.02+rhi/250);
+    }
+  }
+  if((lhe%10)==1){
+    mastery2=m1;
+    if(lhe==21){
+      dex*=(1.04+lhi/125);
+      e_ntl/=(1.02+lhi/250);
+    }
+  }else if((lhe%10)==2){
+    mastery2=m2;
+    if(lhe==22){
+      dex*=(1.04+lhi/125);
+      str*=(1.02+lhi/250);
+    }
+  }else if((lhe%10)==3){
+    mastery2=m3;
+    if(lhe==23){
+      dex*=(1.04+lhi/125);
+      gold_bonus+=0.05*((lhi+5)/5);
+//      ntl*=(1.03+lhi/167);
+    }
+  }else if((lhe%10)==4){
+    mastery2=m4;
+    if(lhe==24){
+      dex*=(1.04+lhi/125);
+      e_dex/=(1.02+lhi/250);
+    }
+  }
+  if((s1e%10)==1){
+    mastery3=m5;
+    if(s1e==21){
+      wis*=(1.04+s1i/125);
+      e_wis/=(1.02+s1i/250);
+    }
+  }else if((s1e%10)==2){
+    mastery3=m6;
+    if(s1e==22){
+      wis*=(1.04+s1i/125);
+      ntl*=(1.02+s1i/250);
+    }
+  }else if((s1e%10)==3){
+    mastery3=m7;
+    if(s1e==23){
+      wis*=(1.04+s1i/125);
+      e_str/=(1.02+s1i/250);
+    }
+  }else if((s1e%10)==4){
+    mastery3=m8;
+    if(s1e==24){
+      wis*=(1.04+s1i/125);
+      ari=ari*1+Math.round(s1i/5);
+    }
+  }
+  if((s2e%10)==1){
+    mastery4=m5;
+    if(s2e==21){
+      wis*=(1.04+s2i/125);
+      e_wis/=(1.02+s1i/250);
+    }
+  }else if((s2e%10)==2){
+    mastery4=m6;
+    if(s2e==22){
+      wis*=(1.04+s2i/125);
+      ntl*=(1.02+s2i/250);
+    }
+  }else if((s2e%10)==3){
+    mastery4=m7;
+    if(s2e==23){
+      wis*=(1.04+s2i/125);
+      e_str/=(1.02+s2i/250);
+    }
+  }else if((s2e%10)==4){
+    mastery4=m8;
+    if(s2e==24){
+      wis*=(1.04+s2i/125);
+      ari=ari*1+Math.round(s2i/5);
+    }
+  }
+
+  for(i=0;i<10;i++){
+    gx=gems[i]%25;
+    gz=(gems[i]-gx)/25+1;
+    if(gx==1){
+      str=Math.round(str*gemboost(gz));
+    }else if(gx==2){
+      dex=Math.round(dex*gemboost(gz));
+    }else if(gx==3){
+      life=Math.min(vit,life+Math.round(vit*(gemboost(gz)-1)));
+    }else if(gx==4){
+      ntl=Math.round(ntl*gemboost(gz));
+    }else if(gx==5){
+      wis=Math.round(wis*gemboost(gz));
+    }else if(gx==6){
+      e_str=Math.round(e_str*gemdrain(gz));
+    }else if(gx==7){
+      e_dex=Math.round(e_dex*gemdrain(gz));
+    }else if(gx==8){
+      drain=Math.round(Math.min(life,e_life)*(1.1-gemdrain(gz)));
+      e_life-=drain;
+    }else if(gx==9){
+      e_ntl=Math.round(e_ntl*gemdrain(gz));
+    }else if(gx==10){
+      e_wis=Math.round(e_wis*gemdrain(gz));
+    }else if(gx==11){
+      steal=Math.min(str,e_str)*gemsteal(gz);
+      str=str*1+steal;e_str=Math.max(1,e_str-steal);
+    }else if(gx==12){
+      steal=Math.min(dex,e_dex)*gemsteal(gz);
+      dex=dex*1+steal;e_dex=Math.max(1,e_dex-steal);
+    }else if(gx==13){
+      steal=Math.min(life,e_life)*gemsteal(gz);
+      life=Math.round(Math.min(vit,life+steal));e_life=Math.round(Math.max(1,e_life-steal));
+    }else if(gx==14){
+      steal=Math.min(ntl,e_ntl)*gemsteal(gz);
+      ntl=ntl*1+steal;e_ntl=Math.max(1,e_ntl-steal);
+    }else if(gx==15){
+      steal=Math.min(wis,e_wis)*gemsteal(gz);
+      wis=wis*1+steal;e_wis=Math.max(1,e_wis-steal);
+    }else if(gx==16){
+      rhi=rhi*1+gemclass(gz);
+      lhi=lhi*1+gemclass(gz);
+    }else if(gx==17){
+      s1i=s1i*1+gemclass(gz);
+      s2i=s2i*1+gemclass(gz);
+    }else if(gx==18){
+      ari=ari*1+gemclass(gz);
+    }else if(gx==19){
+      gold_bonus+=gemgold(gz)*5;
+    }else if(gx==20){
+      exp_bonus+=gemgold(gz)*2;
+    }else if(gx==21){
+      init_bonus+=gemgold(gz)*5;
+    }
+  }
+  if((rht%10)<6 && (lht%10)==6){
+    rhi=rhi*1+6;
+  }
+  if((lht%10)<6 && (rht%10)==6){
+    lhi=lhi*1+6;
+  }
+  if((s1t%10)<6 && (s2t%10)==5){
+    s1i=s1i*1+6;
+  }
+  if((s2t%10)<6 && (s1t%10)==5){
+    s2i=s2i*1+6;
+  }
+
+  if(rhe==5|| rhe==15|| rhe==25){
+    ari=ari*1+rhi/10;
+    if(rhe==25){
+      rhi-=5;
+      mastery1=m9;
+    }else{
+      rhe=0;rhi=0;
+    }
+  }
+  if(lhe==5|| lhe==15|| lhe==25){
+    ari=ari*1+lhi/10;
+    if(lhe==25){
+      lhi-=5;
+      mastery2=m9;
+    }else{
+      lhe=0;lhi=0;
+    }
+  }
+  chance_hit=dex/e_dex*55*(1+mastery1/100);
+  chance_spell=wis/e_wis*50*(1+mastery3/100);
+  chance_hit2=dex/e_dex*55*(1+mastery2/100);
+  chance_spell2=wis/e_wis*50*(1+mastery4/100);
+  if(ace !=0){
+    if(aci==0){
+      str=str*1+2000;
+    }else if(aci==1){
+      ntl=ntl*1+2000;
+    }else if(aci==2){
+      wis=wis*1+2000;
+    }else if(aci==3){
+      dex=dex*1+2000;
+    }else if(aci==4){
+      vit=vit*1+1000;life=life*1+1000;
+    }else if(aci==10){
+      vit=vit*1+3000;life=life*1+3000;
+    }else if(aci==11){
+      if(s1e %10==4)
+        chance_spell=chance_spell*2;
+      if(s2e %10==4)
+        chance_spell2=chance_spell2*2;
+    }else if(aci==12){
+      chance_spell=chance_spell*1.5;
+      chance_spell2=chance_spell2*1.5;
+    }else if(aci==13){
+      ntl=ntl*1+6000;
+    }else if(aci==15){
+      chance_hit=chance_hit*1.5;
+      chance_hit2=chance_hit2*1.5;
+    }else if(aci==16){
+      str=str*1+6000;
+    }else if(aci==19){
+      exp_bonus+=0.2;
+    }else if(aci==20){
+      drop_bonus+=2;
+    }else if(aci==24){
+      str=str*1+10000;ntl=ntl*1+10000;dex=dex*1+10000;wis=wis*1+10000;
+      vit=vit*1+10000;life=life*1+10000;
+    }
+  }
+  if(clan !=0){
+    if(clani>0){
+      if(clani==1){
+        ari=ari*1+3*clan;
+      }else if(clani==2){
+        exp_bonus+=0.05*clan;
+      }else if(clani==3){
+        gold_bonus+=0.1*clan;
+      }else if(clani==4){
+        drop_bonus+=1*clan;
+      }else if(clani==5){
+        rhi=rhi*1+2*clan;
+        lhi=lhi*1+2*clan;
+        s1i=s1i*1+2*clan;
+        s2i=s2i*1+2*clan;
+      }else if(clani==8){
+        exp_bonus+=0.1*clan;
+      }
+    }
+  }
+  if(kdi>0){
+    if(kdi==3){
+      rhi=rhi*1+1; lhi=lhi*1+1;
+      chance_hit+=10; chance_hit2+=10;
+    }else if(kdi==4){
+      s1i=s1i*1+1; s2i=s2i*1+1;
+      chance_spell+=15; chance_spell2+=15;
+    }else if(kdi==5){
+      rhi=rhi*1+1; lhi=lhi*1+1;
+      chance_hit+=10; chance_hit2+=10;
+      s1i=s1i*1+1; s2i=s2i*1+1;
+      chance_spell+=15; chance_spell2+=15;
+    }
+  }
+  document.st.m_str.value=Math.round(str);
+  document.st.m_dex.value=Math.round(dex);
+  document.st.m_ntl.value=Math.round(ntl);
+  document.st.m_wis.value=Math.round(wis);
+  document.st.m_vit.value=Math.round(vit);
+  document.st.m_life.value=Math.round(life);
+  document.st.m_e_str.value=Math.round(e_str);
+  document.st.m_e_dex.value=Math.round(e_dex);
+  document.st.m_e_ntl.value=Math.round(e_ntl);
+  document.st.m_e_wis.value=Math.round(e_wis);
+  document.st.m_e_life.value=Math.round(e_life);
+
+  document.st.c_hit1.value=Math.round(chance_hit)+"%";
+  document.st.c_hit2.value=Math.round(chance_hit2)+"%";
+  document.st.c_cast1.value=Math.round(chance_spell)+"%";
+  document.st.c_cast2.value=Math.round(chance_spell2)+"%";
+
+  document.st.wc_1.value=rhi;
+  document.st.wc_2.value=lhi;
+  document.st.sc_1.value=s1i;
+  document.st.sc_2.value=s2i;
+  document.st.ac.value=ari*1+mastery5/5;
+  document.st.gold_b.value=Math.round((1+gold_bonus)*100)+"%";
+  document.st.exp_b.value=Math.round((1+exp_bonus)*100)+"%";
+  document.st.gem_b.value=2+drop_bonus*1;
+  document.st.drop_b.value=2+drop_bonus*1;
+  fdam_1=Math.pow(1.2,(rhi-e_eq));
+  fdam_2=Math.pow(1.2,(lhi-e_eq));
+  cdam_1=Math.pow(1.2,(s1i-e_eq));
+  cdam_2=Math.pow(1.2,(s2i-e_eq));
+  if(rht<5 || rhe==25){
+    document.st.f_dam1_min.value=Math.round(str/8*fdam_1);
+    document.st.f_dam1_max.value=Math.round(str/1.7*fdam_1);
+    document.st.f_dam1_crit.value=Math.round(str/1.7*fdam_1*5);
+  }else{
+    document.st.f_dam1_min.value=0;
+    document.st.f_dam1_max.value=0;
+    document.st.f_dam1_crit.value=0;
+  }
+  if(lht<5 || lhe==25){
+    document.st.f_dam2_min.value=Math.round(str/8*fdam_2);
+    document.st.f_dam2_max.value=Math.round(str/1.7*fdam_2);
+    document.st.f_dam2_crit.value=Math.round(str/1.7*fdam_1*5);
+  }else{
+    document.st.f_dam2_min.value=0;
+    document.st.f_dam2_max.value=0;
+    document.st.f_dam2_crit.value=0;
+  }
+  if(s1t<4){
+    document.st.c_dam1_min.value=Math.round(ntl/7*cdam_1);
+    document.st.c_dam1_max.value=Math.round(ntl/1.4*cdam_1);
+    document.st.c_dam1_crit.value=Math.round(ntl/1.7*cdam_1*4.5);
+  }else if(s1t==4){
+    document.st.c_dam1_min.value=Math.round(ntl/10*cdam_1);
+    document.st.c_dam1_max.value=Math.round(ntl*cdam_1);
+    document.st.c_dam1_crit.value=Math.round(ntl*cdam_1);
+  }else{
+    document.st.c_dam1_min.value=0;
+    document.st.c_dam1_max.value=0;
+    document.st.c_dam1_crit.value=0;
+  }
+  if(s2t<4){
+    document.st.c_dam2_min.value=Math.round(ntl/7*cdam_2);
+    document.st.c_dam2_max.value=Math.round(ntl/1.4*cdam_2);
+    document.st.c_dam2_crit.value=Math.round(ntl/1.7*cdam_2*4.5);
+  }else if(s2t==4){
+    document.st.c_dam2_min.value=Math.round(ntl/10*cdam_2);
+    document.st.c_dam2_max.value=Math.round(ntl*cdam_2);
+    document.st.c_dam2_crit.value=Math.round(ntl*cdam_2);
+  }else{
+    document.st.c_dam2_min.value=0;
+    document.st.c_dam2_max.value=0;
+    document.st.c_dam2_crit.value=0;
+  }
+  u_init_min=Math.max(dex,wis)*80*(1+init_bonus);
+  u_init_max=Math.max(dex,wis)*100*(1+init_bonus);
+  e_init_min=Math.max(e_dex,e_wis)*70;
+  e_init_max=Math.max(e_dex,e_wis)*90;
+  if(u_init_min>e_init_max){
+    document.st.c_first.value="100%";
+  }else if(u_init_max<e_init_min){
+    document.st.c_first.value="0%";
+  }else{
+    if(u_init_max>e_init_max){
+      c_first=1-((e_init_max-u_init_min)/(e_init_max-e_init_min))*((e_init_max-u_init_min)/(u_init_max-u_init_min));
+    }else{
+      c_first=((u_init_max-e_init_min)/(u_init_max-u_init_min))*((u_init_max-e_init_min)/(e_init_max-e_init_min));
+    }
+    document.st.c_first.value=100*c_first+"%";
+  }
+}
+
+function rhl(){
+  rht=document.st.rht.options.selectedIndex;
+  rhc=document.st.rhc.options.selectedIndex;
+  rhe=rht+rhc*10+1;
+  if(rhe==1 || rhe==6|| rhe==16|| rhe==26){
+    rhe=1;
+    wep_list=wep_list1;
+  }else if(rhe==2){
+    wep_list=wep_list2;
+  }else if(rhe==3){
+    wep_list=wep_list3;
+  }else if(rhe==4){
+    wep_list=wep_list4;
+  }else if(rhe==5){
+    wep_list=armor_list2;
+  }
+  if(rhe<11){
+    document.st.rhi.length=34;
+    for(a2=0;a2<34;a2++){
+      document.st.rhi.options[a2].text=wep_list[a2];
+      document.st.rhi.options[a2].value=a2;
+    }
+  }else{
+    document.st.rhi.length=12;
+    for(a2=0;a2<12;a2++){
+      if(rhe==11){
+        document.st.rhi.options[a2].text="Phantom Sword "+ro_nums[a2];
+      }else if(rhe==12){
+        document.st.rhi.options[a2].text="Phantom Axe "+ro_nums[a2];
+      }else if(rhe==13){
+        document.st.rhi.options[a2].text="Phantom Staff "+ro_nums[a2];
+      }else if(rhe==14){
+        document.st.rhi.options[a2].text="Phantom Hammer "+ro_nums[a2];
+      }else if(rhe==15){
+        document.st.rhi.options[a2].text="Ghost Shield "+ro_nums[a2];
+      }else if(rhe==21){
+        document.st.rhi.options[a2].text="Mystic Blade "+ro_nums[a2];
+      }else if(rhe==22){
+        document.st.rhi.options[a2].text="Mystic Hatchet "+ro_nums[a2];
+      }else if(rhe==23){
+        document.st.rhi.options[a2].text="Mystic Wand "+ro_nums[a2];
+      }else if(rhe==24){
+        document.st.rhi.options[a2].text="Mystic Maul "+ro_nums[a2];
+      }else if(rhe==25){
+        document.st.rhi.options[a2].text="Spiked Shield "+ro_nums[a2];
+      }
+      document.st.rhi.options[a2].value=a2*5;
+    }
+
+  }
+}
+function lhl(){
+  lht=document.st.lht.options.selectedIndex;
+  lhc=document.st.lhc.options.selectedIndex;
+  lhe=lht+lhc*10+1;
+  if(lhe==1 || lhe==6|| lhe==16|| lhe==26){
+    lhe=1;
+    wep_list=wep_list1;
+  }else if(lhe==2){
+    wep_list=wep_list2;
+  }else if(lhe==3){
+    wep_list=wep_list3;
+  }else if(lhe==4){
+    wep_list=wep_list4;
+  }else if(lhe==5){
+    wep_list=armor_list2;
+  }
+  if(lhe<11){
+    document.st.lhi.length=34;
+    for(a2=0;a2<34;a2++){
+      document.st.lhi.options[a2].text=wep_list[a2];
+      document.st.lhi.options[a2].value=a2;
+    }
+  }else{
+    document.st.lhi.length=12;
+    for(a2=0;a2<12;a2++){
+      if(lhe==11){
+        document.st.lhi.options[a2].text="Phantom Sword "+ro_nums[a2];
+      }else if(lhe==12){
+        document.st.lhi.options[a2].text="Phantom Axe "+ro_nums[a2];
+      }else if(lhe==13){
+        document.st.lhi.options[a2].text="Phantom Staff "+ro_nums[a2];
+      }else if(lhe==14){
+        document.st.lhi.options[a2].text="Phantom Hammer "+ro_nums[a2];
+      }else if(lhe==15){
+        document.st.lhi.options[a2].text="Ghost Shield "+ro_nums[a2];
+      }else if(lhe==21){
+        document.st.lhi.options[a2].text="Mystic Blade "+ro_nums[a2];
+      }else if(lhe==22){
+        document.st.lhi.options[a2].text="Mystic Hatchet "+ro_nums[a2];
+      }else if(lhe==23){
+        document.st.lhi.options[a2].text="Mystic Wand "+ro_nums[a2];
+      }else if(lhe==24){
+        document.st.lhi.options[a2].text="Mystic Maul "+ro_nums[a2];
+      }else if(lhe==25){
+        document.st.lhi.options[a2].text="Spiked Shield "+ro_nums[a2];
+      }
+      document.st.lhi.options[a2].value=a2*5;
+    }
+
+  }
+}
+function s1l(){
+  s1t=document.st.s1t.options.selectedIndex;
+  s1c=document.st.s1c.options.selectedIndex;
+  s1e=s1t+s1c*10+1;
+  if(s1e==1 || s1e==5|| s1e==15|| s1e==25){
+    s1e=1;
+    spell_list=spell_list1;
+  }else if(s1e==2){
+    spell_list=spell_list2;
+  }else if(s1e==3){
+    spell_list=spell_list3;
+  }else if(s1e==4){
+    spell_list=spell_list4;
+  }
+  if(s1e<11){
+    document.st.s1i.length=34;
+    for(a2=0;a2<34;a2++){
+      document.st.s1i.options[a2].text=spell_list[a2];
+      document.st.s1i.options[a2].value=a2;
+    }
+  }else{
+    document.st.s1i.length=12;
+    for(a2=0;a2<12;a2++){
+      if(s1e==11){
+        document.st.s1i.options[a2].text="Shadow Fire "+ro_nums[a2];
+      }else if(s1e==12){
+        document.st.s1i.options[a2].text="Shadow Freeze "+ro_nums[a2];
+      }else if(s1e==13){
+        document.st.s1i.options[a2].text="Shadow Shock "+ro_nums[a2];
+      }else if(s1e==14){
+        document.st.s1i.options[a2].text="Shadow Heal "+ro_nums[a2];
+      }else if(s1e==21){
+        document.st.s1i.options[a2].text="Mythic Flame "+ro_nums[a2];
+      }else if(s1e==22){
+        document.st.s1i.options[a2].text="Mythic Frost "+ro_nums[a2];
+      }else if(s1e==23){
+        document.st.s1i.options[a2].text="Mythic Storm "+ro_nums[a2];
+      }else if(s1e==24){
+        document.st.s1i.options[a2].text="Mythic Cure "+ro_nums[a2];
+      }
+      document.st.s1i.options[a2].value=a2*5;
+    }
+
+  }
+}
+function s2l(){
+  s2t=document.st.s2t.options.selectedIndex;
+  s2c=document.st.s2c.options.selectedIndex;
+  s2e=s2t+s2c*10+1;
+  if(s2e==1 || s2e==5|| s2e==15|| s2e==25){
+    s2e=1;
+    spell_list=spell_list1;
+  }else if(s2e==2){
+    spell_list=spell_list2;
+  }else if(s2e==3){
+    spell_list=spell_list3;
+  }else if(s2e==4){
+    spell_list=spell_list4;
+  }
+  if(s2e<11){
+    document.st.s2i.length=34;
+    for(a2=0;a2<34;a2++){
+      document.st.s2i.options[a2].text=spell_list[a2];
+      document.st.s2i.options[a2].value=a2;
+    }
+  }else{
+    document.st.s2i.length=12;
+    for(a2=0;a2<12;a2++){
+      if(s2e==11){
+        document.st.s2i.options[a2].text="Shadow Fire "+ro_nums[a2];
+      }else if(s2e==12){
+        document.st.s2i.options[a2].text="Shadow Freeze "+ro_nums[a2];
+      }else if(s2e==13){
+        document.st.s2i.options[a2].text="Shadow Shock "+ro_nums[a2];
+      }else if(s2e==14){
+        document.st.s2i.options[a2].text="Shadow Heal "+ro_nums[a2];
+      }else if(s2e==21){
+        document.st.s2i.options[a2].text="Mythic Flame "+ro_nums[a2];
+      }else if(s2e==22){
+        document.st.s2i.options[a2].text="Mythic Frost "+ro_nums[a2];
+      }else if(s2e==23){
+        document.st.s2i.options[a2].text="Mythic Storm "+ro_nums[a2];
+      }else if(s2e==24){
+        document.st.s2i.options[a2].text="Mythic Cure "+ro_nums[a2];
+      }
+      document.st.s2i.options[a2].value=a2*5;
+    }
+
+  }
+}
+function arl(){
+  arx=document.st.arx.options.selectedIndex;
+  arc=document.st.arc.options.selectedIndex;
+  are=arx+arc*10+1;
+  if(are==1 || are==2|| are==12|| are==22){
+    are=1;
+    armor_list=armor_list1;
+  }
+  if(are<11){
+    document.st.ari.length=34;
+    for(a2=0;a2<34;a2++){
+      document.st.ari.options[a2].text=armor_list[a2];
+      document.st.ari.options[a2].value=a2;
+    }
+  }else{
+    document.st.ari.length=12;
+    for(a2=0;a2<12;a2++){
+      if(are==11){
+        document.st.ari.options[a2].text="Shadow Armor "+ro_nums[a2];
+      }else if(are==21){
+        document.st.ari.options[a2].text="Saintly Plate "+ro_nums[a2];
+      }
+      document.st.ari.options[a2].value=a2*5;
+    }
+  }
+}
+function gemboost(b1){
+  if(b1==1)
+    return 1.05;
+  if(b1==2)
+    return 1.10;
+  if(b1==3)
+    return 1.20;
+  if(b1==4)
+    return 1.35;
+  return 1;
+}
+function gemdrain(b1){
+  if(b1==1)
+    return 0.95;
+  if(b1==2)
+    return 0.90;
+  if(b1==3)
+    return 0.80;
+  if(b1==4)
+    return 0.65;
+  return 1;
+}
+function gemsteal(b1){
+  if(b1==1)
+    return 0.04;
+  if(b1==2)
+    return 0.08;
+  if(b1==3)
+    return 0.16;
+  if(b1==4)
+    return 0.32;
+  return 0;
+}
+function gemclass(b1){
+  if(b1==1)
+    return 1;
+  if(b1==2)
+    return 2;
+  if(b1==3)
+    return 4;
+  if(b1==4)
+    return 6;
+  return 0;
+}
+function gemgold(b1){
+  if(b1==1)
+    return 0.01;
+  if(b1==2)
+    return 0.02;
+  if(b1==3)
+    return 0.05;
+  if(b1==4)
+    return 0.1;
+  return 0;
+}
+
+</script>
+</head><body bgcolor=#000000 text=10FF10>
+<center>
+<font size=+2><i>Shimlar Stats Calculator</i></font>
+<form name=st><b>Your Stats:
+<table width=100% border=1 cellpadding=2 cellspacing=0><tr>
+<td><center>STR <input name='str' value=20 size=9 maxlength=9></td>
+<td><center>DEX <input name='dex' value=20 size=9 maxlength=9></td>
+<td><center>NTL <input name='ntl' value=20 size=9 maxlength=9></td>
+<td><center>WIS <input name='wis' value=20 size=9 maxlength=9></td>
+<td><center>VIT <input name='vit' value=20 size=9 maxlength=9></td>
+<td><center>Life <input name='life' value=20 size=9 maxlength=9></td></tr></table><br>
+Enemy Stats:
+<table width=100% border=1 cellpadding=2 cellspacing=0><tr>
+<td><center>STATS <input name='e_stats' value=10 size=9 maxlength=9></td>
+<td><center>EQ class <input name='e_eq' value=1 size=4 maxlength=3></td>
+</tr></table><br>
+
+Your Items:
+<table width=100% border=1 cellpadding=2 cellspacing=0><tr>
+<td><center>Right Hand: </td><td><center><select name='rhc' onchange='javascript:rhl()'>
+<option>Normal</option>
+<option>Shadow</option>
+<option>Mystic</option></select>
+</td><td><center><select name='rht' onchange='javascript:rhl()'>
+<option>Sword</option>
+<option>Axe</option>
+<option>Staff</option>
+<option>Mace</option>
+<option>Shield</option>
+<option>Hand</option></select>
+</td><td><center><select name='rhi'>
+<script>
+for(a1=0;a1<34;a1++){
+  document.write("<option value=",a1,">",wep_list1[a1],"</option>");
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g1'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g6'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select></td></tr><tr>
+<td><center>Left Hand: </td><td><center><select name='lhc' onchange='javascript:lhl()'>
+<option>Normal</option>
+<option>Shadow</option>
+<option>Mystic</option></select>
+</td><td><center><select name='lht' onchange='javascript:lhl()'>
+<option>Sword</option>
+<option>Axe</option>
+<option>Staff</option>
+<option>Mace</option>
+<option>Shield</option>
+<option>Hand</option></select>
+</td><td><center><select name='lhi'>
+<script>
+for(a1=0;a1<34;a1++){
+  document.write("<option value=",a1,">",wep_list1[a1],"</option>");
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g2'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g7'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select></td></tr><tr>
+<td><center>Spell One: </td><td><center><select name='s1c' onchange='javascript:s1l()'>
+<option>Normal</option>
+<option>Shadow</option>
+<option>Mystic</option></select>
+</td><td><center><select name='s1t' onchange='javascript:s1l()'>
+<option>Fire</option>
+<option>Cold</option>
+<option>Air</option>
+<option>Arcane</option>
+<option>None</option></select>
+</td><td><center><select name='s1i'>
+<script>
+for(a1=0;a1<34;a1++){
+  document.write("<option value=",a1,">",spell_list1[a1],"</option>");
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g3'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g8'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select></td></tr><tr>
+<td><center>Spell Two: </td><td><center><select name='s2c' onchange='javascript:s2l()'>
+<option>Normal</option>
+<option>Shadow</option>
+<option>Mystic</option></select>
+</td><td><center><select name='s2t' onchange='javascript:s2l()'>
+<option>Fire</option>
+<option>Cold</option>
+<option>Air</option>
+<option>Arcane</option>
+<option>None</option></select>
+</td><td><center><select name='s2i'>
+<script>
+for(a1=0;a1<34;a1++){
+  document.write("<option value=",a1,">",spell_list1[a1],"</option>");
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g4'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g9'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select></td></tr><tr>
+<td><center>Armor: </td><td><center><select name='arc' onchange='javascript:arl()'>
+<option>Normal</option>
+<option>Shadow</option>
+<option>Mystic</option></select>
+</td><td><center><select name='arx' onchange='javascript:arl()'>
+<option>Armor</option>
+<option>Rags</option></select>
+</td><td><center><select name='ari'>
+<script>
+for(a1=0;a1<34;a1++){
+  document.write("<option value=",a1,">",armor_list1[a1],"</option>");
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g5'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select>
+</td><td><center>Gem: <select name='g10'>
+<option>none</option>
+<script>
+for(a3=0;a3<4;a3++){
+for(a1=0;a1<21;a1++){
+  document.write("<option value=",a3*25+a1+1,">",gem_list[a1],g_grade[a3],"</option>");
+}
+}
+</script>
+</select></td></tr></table>
+<table width=50%><tr>
+<td><center>Accessory: </td><td><center><select name='act'>
+<option>Accessory</option>
+<option>Nothing</option></select>
+</td><td><center><select name='aci'>
+<script>
+for(a1=0;a1<25;a1++){
+  document.write("<option value=",a1,">",acc_list[a1],"</option>");
+}
+</script>
+</select></td></tr><tr>
+<td><center>Clan bonus: </td><td><center><select name='clan'>
+<option>In a clan</option>
+<option>Leader</option>
+<option>No bonus/clan</option></select>
+</td><td><center><select name='clani'>
+<script>
+for(a1=0;a1<8;a1++){
+  document.write("<option value=",a1+1,">",c_bonus[a1],"</option>");
+}
+</script>
+</select></td></tr><tr>
+<td colspan=2><center>Kingdom misc: </td><td><center><select name='kdi'>
+<script>
+for(a1=0;a1<7;a1++){
+  document.write("<option value=",a1+1,">",kd_xlist[a1],"</option>");
+}
+</script>
+</select></td></tr>
+</table><br>
+Your Masteries:
+<table width=100% border=1 cellpadding=2 cellspacing=0><tr>
+<td><center>Sword <input name='m1' value=0 size=4 maxlength=3></td>
+<td><center>Axe <input name='m2' value=0 size=4 maxlength=3></td>
+<td><center>Staff <input name='m3' value=0 size=4 maxlength=3></td>
+<td><center>Mace <input name='m4' value=0 size=4 maxlength=3></td>
+<td><center>Fire <input name='m5' value=0 size=4 maxlength=3></td>
+<td><center>Cold <input name='m6' value=0 size=4 maxlength=3></td>
+<td><center>Air <input name='m7' value=0 size=4 maxlength=3></td>
+<td><center>Arcane <input name='m8' value=0 size=4 maxlength=3></td>
+<td><center>Armor <input name='m9' value=0 size=4 maxlength=3></td></tr></table><br>
+
+<input type=button value='Calculate' onClick='javascript:calc()'><br>
+<i>Calculation Results:</i><br>
+Your Modified Stats:
+<table width=100% border=1 cellpadding=2 cellspacing=0><tr>
+<td><center>STR <input name='m_str' size=9 maxlength=9></td>
+<td><center>DEX <input name='m_dex' size=9 maxlength=9></td>
+<td><center>NTL <input name='m_ntl' size=9 maxlength=9></td>
+<td><center>WIS <input name='m_wis' size=9 maxlength=9></td>
+<td><center>VIT <input name='m_vit' size=9 maxlength=9></td>
+<td><center>Life <input name='m_life' size=9 maxlength=9></td></tr></table><br>
+Enemy Modified Stats:
+<table width=100% border=1 cellpadding=2 cellspacing=0><tr>
+<td><center>STR <input name='m_e_str' size=9 maxlength=9></td>
+<td><center>DEX <input name='m_e_dex' size=9 maxlength=9></td>
+<td><center>NTL <input name='m_e_ntl' size=9 maxlength=9></td>
+<td><center>WIS <input name='m_e_wis' size=9 maxlength=9></td>
+<td><center>Life <input name='m_e_life' size=9 maxlength=9></td></tr></table><br>
+Other Info:
+<table width=100% border=1 cellpadding=2 cellspacing=0><tr>
+<td><center>Chance to hit 1<br><input name='c_hit1' size=6 maxlength=5></td>
+<td><center>Chance to hit 2<br><input name='c_hit2' size=6 maxlength=5></td>
+<td><center>Chance to cast 1<br><input name='c_cast1' size=6 maxlength=5></td>
+<td><center>Chance to cast 2<br><input name='c_cast2' size=6 maxlength=5></td>
+<td><center>Initiative <br><input name='c_first' size=6 maxlength=5></td></tr><tr>
+<td><center>Weapon class 1 <br><input name='wc_1' size=4 maxlength=3></td>
+<td><center>Weapon class 2 <br><input name='wc_2' size=4 maxlength=3></td>
+<td><center>Spell class 1 <br><input name='sc_1' size=4 maxlength=3></td>
+<td><center>Spell class 2 <br><input name='sc_2' size=4 maxlength=3></td>
+<td><center>Armor class <br><input name='ac' size=4 maxlength=3></td></tr><tr>
+<td><center>Attack Damage 1 
+<br>min <input name='f_dam1_min' size=12 maxlength=13>
+<br>max <input name='f_dam1_max' size=12 maxlength=13>
+<br>max crit<input name='f_dam1_crit' size=12 maxlength=13></td>
+<td><center>Attack Damage 2 
+<br>min <input name='f_dam2_min' size=12 maxlength=13>
+<br>max <input name='f_dam2_max' size=12 maxlength=13>
+<br>max crit<input name='f_dam2_crit' size=12 maxlength=13></td>
+<td><center>Cast Damage 1 
+<br>min <input name='c_dam1_min' size=12 maxlength=13>
+<br>max <input name='c_dam1_max' size=12 maxlength=13>
+<br>max crit<input name='c_dam1_crit' size=12 maxlength=13></td>
+<td><center>Cast Damage 2 
+<br>min <input name='c_dam2_min' size=12 maxlength=13>
+<br>max <input name='c_dam2_max' size=12 maxlength=13>
+<br>max crit<input name='c_dam2_crit' size=12 maxlength=13></td>
+<td>&nbsp;</td></tr><tr>
+<td><center>Gold Gain <br><input name='gold_b' size=6 maxlength=5></td>
+<td><center>Exp Gain <br><input name='exp_b' size=6 maxlength=5></td>
+<td><center>Gem Chance <br><input name='gem_b' size=6 maxlength=5>&nbsp;/1200</td>
+<td><center>Shadow Chance <br><input name='drop_b' size=6 maxlength=5>&nbsp;/18000</td>
+<td>&nbsp;</td>
+</tr></table>
+</form>
+<script>
+  document.st.lht.selectedIndex=5;
+  document.st.s2t.selectedIndex=4;
+  document.st.act.selectedIndex=1;
+  document.st.clan.selectedIndex=2;
+</script>
+</b>Note: Check GodOfWar's helpsite for monster stats. Enemy EQ class is dependant on
+zone, and not disclosed here. You could figure it out by the damage you do to the monster.
+This page uses the actual game code formulas, however if you hit the enemy, the damage is
+always at least 1, not 0.<br>
+Critical damage is 5x for weapons, 4.5x for spells, there is no critical heal.<br>
+<b>Initiative is the chance to attack first in a round, it is capped at 100% and 0%.</b><br>
+<br>Created in Wordpad by the Chaos God in 2002 =8O)
+</center></body>
+</html>

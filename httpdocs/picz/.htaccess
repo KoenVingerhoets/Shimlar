@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://shimlar.org/.*$ [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.shimlar.org/.*$ [NC]
+RewriteRule .*\.(gif|GIF|jpg|JPG|BMP|bmp|ico)$ - [F]
+
+order allow,deny 
+deny from 66.246.37.
+deny from 24.210.226.
+deny from 24.116.186.155
+deny from 209.204.86.
+allow from all 
