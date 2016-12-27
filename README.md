@@ -10,7 +10,7 @@ The jscripts are on the client side to draw the required lay-out on the screen.
 
 HOW TO RESET / INSTALL
 ----------------------
-* optional * If name reservation was used
+! optional ! If name reservation was used
 Clean table Reservation.
 Fill it with charnames from Players as follows
 "insert into Reservation (select p.Name, p.Password, p.Login, p.Channels from Players p, Stats s where p.Id = s.Id and (s.Lvl>49 or s.banked > 999999))"
