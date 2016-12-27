@@ -8,8 +8,8 @@ The code is a complex interaction between code in the webserver (Apache - the ht
 A command resulted in a php file being executed with the result printed into a javascript function call. 
 The jscripts are on the client side to draw the required lay-out on the screen.
 
--- HOW TO RESET / INSTALL --
-----------------------------
+HOW TO RESET / INSTALL
+----------------------
 * optional * If name reservation was used
 Clean table Reservation.
 Fill it with charnames from Players as follows
